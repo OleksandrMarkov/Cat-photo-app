@@ -1,94 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-
-    <title>Survey Form</title>
+    <title>Registration Form</title>
+	  <link rel="stylesheet" href="styles.css" />
   </head>
-
-    <body>
-
-      <section>
-      <h1 id = "title">freeCodeCamp Survey Form</h1>
-
-<p id="description">Thank you for taking the time to help us improve the platform
-</p>
-</section>
-
-<section>
-<form id="survey-form">
-
-<article class="article">
-  <label id = "name-label">
-  <p class="label">Name</p>
-  <input id="name" type="text" placeholder="Enter your name" value="" required></label>
-</article>
-
-<article class="article">
-  <label id = "email-label">
-  <p class="label">Email</p>  
-  <input id="email" type="email" placeholder="Enter your Email" value="" required> </label>
-</article>
-
-<article class="article">
-  <label id ="number-label">
-    <p class="label">Age(optional)</p>
-    <input id="number" type="number" placeholder="Age" value="" min="18" max="65"> </label>
-</article>
-
-<article class="article"> 
-  <p class="label">Which option best describes your current role?</p>
-  <select id="dropdown" placeholder = "Select current role">
-  <option value="student">Student</option>
-  <option value="job">Full Time Job</option>
-  <option value="learner">Full Time Learner</option>
-  <option value="not-to-say">Prefer not to say</option>
-  <option value="other">Other</option>
-</select>
-</article>
-
-<article class="article">
-<p class="label">Would you recommend freeCodeCamp to a friend?
-</p>
-<label><input id="definitely" type="radio" name="reccomend" value="outdoor"> Definitely</label>
-<label><input id="definitely" type="radio" name="reccomend" value="maybe"> Maybe</label>
-<label><input id="definitely" type="radio" name="reccomend" value="not-sure"> Not sure</label>
-</article>
-
-<article class="article">
-<p class="label">What is your favorite feature of freeCodeCamp?
-</p>
-  <select id="dropdown" placeholder = "Select an option">
-  <option value="challenges">Challenges</option>
-  <option value="projects">Projects</option>
-  <option value="community">Community</option>
-</select>
-</article>
-
-<article class="article">
-<p class="label">What would you like to see improved? (Check all that apply)
-</p>
-<input id="front" type="checkbox" name="improved" value="front"> <label for="improved">Front-end Projects</label>
-<input id="back" type="checkbox" name="improved" value="back"> <label for="improved">Back-end Projects</label>
-<input id="forum" type="checkbox" name="improved" value="forum"> <label for="improved">Forum </label>
-</article>
-
-<article class="article">
-<p class="label">Any comments or suggestions?</p>
-<textarea id="comments" name="comments" rows="4" cols="50">
-</textarea>
-</article>
-
-<article class="article">
-<button id="submit" type="submit">Submit</button>
-</article>
-</section>
-</form>
-    </body>
+  <body>
+    <h1>Registration Form</h1>
+    <p>Please fill out this form with the required information</p>
+    <form action='https://register-demo.freecodecamp.org'>
+      <fieldset>
+        <label>Enter Your First Name: <input type="text" name="first-name" required /></label>
+        <label>Enter Your Last Name: <input type="text" name="last-name" required /></label>
+        <label>Enter Your Email: <input type="email" name="email" required /></label>
+        <label>Create a New Password: <input type="password" name="password" pattern="[a-z0-5]{8,}" required /></label>
+      </fieldset>
+      <fieldset>
+        <label><input type="radio" name="account-type" class="inline" /> Personal Account</label>
+        <label><input type="radio" name="account-type" class="inline" /> Business Account</label>
+        <label>
+          <input type="checkbox" name="terms" class="inline" required /> I accept the <a href="https://www.freecodecamp.org/news/terms-of-service/">terms and conditions</a>
+			  </label>
+      </fieldset>
+      <fieldset>
+        <label>Upload a profile picture: <input type="file" name="file" /></label>
+        <label>Input your age (years): <input type="number" name="age" min="13" max="120" />
+			  </label>
+        <label>How did you hear about us?
+          <select name="referrer">
+            <option value="">(select one)</option>
+            <option value="1">freeCodeCamp News</option>
+            <option value="2">freeCodeCamp YouTube Channel</option>
+            <option value="3">freeCodeCamp Forum</option>
+            <option value="4">Other</option>
+          </select>
+        </label>
+        <label>Provide a bio:
+          <textarea name="bio" rows="3" cols="30" placeholder="I like coding on the beach..."></textarea>
+			  </label>
+      </fieldset>
+      <input type="submit" value="Submit" />
+    </form>
+  </body>
 </html>
